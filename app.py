@@ -29,7 +29,7 @@ def retrieve_info(query):
 llm = ChatOpenAI(temperature=0, model="gpt-3.5-turbo-16k-0613")
 
 template = """
-You are an automation process for searching in a document. 
+You are an automation process agent for searching in a document. 
 I will ask you a question and you will give me answer from the document 
 and you will follow ALL of the rules below:
 
@@ -37,7 +37,6 @@ and you will follow ALL of the rules below:
 
 2/ You will be asked to count the updatation on the queries and provide the dates, if the updated by is empty it means it is new query and does not count as updated.
 
-3/ If the best practice are irrelevant, then try to mimic the style of the best practice to prospect's message
 
 
 {message}
